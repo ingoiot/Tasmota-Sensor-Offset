@@ -8,6 +8,9 @@ Command | Description
 TelePeriod | show publishing interval
 TelePeriod  10 | Set to 10 seconds(10...3600sec)
 Rule1 ON | creates Rule1
-Tele-DS18B20#Temperature | sends Data by TelePeriod interval
-
+Tele- | sends Data by TelePeriod interval
+backlog | allows multiple commands in a row
+var1 %value% | stores sensor data in variable1
+add1 2 | add 2 to variable1
+Publish temp/s1 var1 | publishes variable1 as MQTT payload
 //
