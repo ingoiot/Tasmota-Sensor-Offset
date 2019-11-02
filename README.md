@@ -14,3 +14,6 @@ var1 %value% | stores sensor data in variable1
 add1 2 | add 2 to variable1
 Publish temp/s1 var1 | publishes variable1 as MQTT payload
 //
+
+
+Rule on ENERGY#power>8 do  RuleTimer1 16 endon on Rules#Timer=1 do power1 off endon
