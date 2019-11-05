@@ -20,4 +20,4 @@ Rule on ENERGY#power>8 do  RuleTimer1 16 endon on Rules#Timer=1 do power1 off en
 
 
 on tele-ENERGY#Current do publish ingoiot/f/4 %value% endon
-only publish on teleperiod / tele- in front of sensor
+//only publish on teleperiod / tele- in front of sensor
