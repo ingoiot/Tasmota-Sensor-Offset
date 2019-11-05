@@ -17,3 +17,7 @@ Publish temp/s1 var1 | publishes variable1 as MQTT payload
 
 
 Rule on ENERGY#power>8 do  RuleTimer1 16 endon on Rules#Timer=1 do power1 off endon
+
+
+on tele-ENERGY#Current do publish ingoiot/f/4 %value% endon
+only publish on teleperiod / tele- in front of sensor
