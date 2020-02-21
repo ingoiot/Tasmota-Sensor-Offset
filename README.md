@@ -23,8 +23,12 @@ on tele-ENERGY#Current do publish ingoiot/f/4 %value% endon
 //only publish on teleperiod / tele- in front of sensor
 
 
+
 #empfänger:{"Rule1":"ON","Once":"OFF","StopOnError":"OFF","Free":475,"Rules":"on Rules#Timer=1 do power1 off endon"}
+
 rule1 on Rules#Timer=1 do power1 off endon
+
+
 
 
 #sender: {"Rule1":"ON","Once":"OFF","StopOnError":"OFF","Free":403,"Rules":"on switch1#state=1 do backlog websend [192.168.43.127] #RuleTimer 80; websend [192.168.43.127] power on endon"}
