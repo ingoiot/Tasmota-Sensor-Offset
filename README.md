@@ -49,6 +49,15 @@ Rule1
   ON Rules#Timer=1 DO Power1 OFF ENDON
 ENDON
 Rule1 1
+Rule1 (aktiv, Länge: 253 Bytes)
 
-Hier die bereinigte und lesbare Darstellung von Rule1 (wie sie aktuell auf deinem Gerät steht):
+ON System#Boot DO Power1 ON ENDON
+
+ON Energy#Power<8 DO RuleTimer1 10 ENDON
+; bei <8W starte 10-Sekunden-Timer
+
+ON Energy#Power>=10 DO RuleTimer1 0 ENDON
+; bei ≥10W Timer sofort abbrechen
+
+ON Rules#Timer=1 DO Power1 OFF ENDON
 
