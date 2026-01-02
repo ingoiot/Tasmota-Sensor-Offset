@@ -61,3 +61,9 @@ ON Energy#Power>=10 DO RuleTimer1 0 ENDON
 
 ON Rules#Timer=1 DO Power1 OFF ENDON
 
+Funktionsweise (kurz zusammengefasst)Beim Einschalten/Neustart des Geräts → Relay sofort EIN (Power1 ON).
+Sobald der Verbrauch unter 8 Watt fällt → startet ein 10-Sekunden-Countdown (RuleTimer1).
+Sollte der Verbrauch während dieser 10 Sekunden wieder auf 10 Watt oder mehr steigen → Timer wird sofort abgebrochen.
+Bleibt der Verbrauch dauerhaft 10 Sekunden lang unter 8 Watt → Relay wird AUSgeschaltet (Power1 OFF).
+
+
