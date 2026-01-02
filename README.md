@@ -34,3 +34,10 @@ rule1 on Rules#Timer=1 do power1 off endon
 #sender: {"Rule1":"ON","Once":"OFF","StopOnError":"OFF","Free":403,"Rules":"on switch1#state=1 do backlog websend [192.168.43.127] #RuleTimer 80; websend [192.168.43.127] power on endon"}
 
 rule1 on switch1#state=1 do backlog websend [192.168.43.127] RuleTimer 8; websend [192.168.43.127] power on endon
+
+
+
+1. automatisch einschalten
+2. strommessen
+3. wenn strom unter 8 watt fällt, nach 10 sekunden  ausschalten
+4. 
