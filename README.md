@@ -39,5 +39,16 @@ rule1 on switch1#state=1 do backlog websend [192.168.43.127] RuleTimer 8; websen
 
 1. automatisch einschalten
 2. strommessen
-3. wenn strom unter 8 watt fällt, nach 10 sekunden  ausschalten
-4. 
+3. wenn strom unter 8 watt fällt, nach 10 sekunden  ausschalten (mit verzögerung)
+
+
+Rule1
+  ON System#Boot DO Power1 ON ENDON
+  ON Energy#Power<8 DO RuleTimer1 10 ENDON
+  ON Energy#Power>=10 DO RuleTimer1 0 ENDON
+  ON Rules#Timer=1 DO Power1 OFF ENDON
+ENDON
+Rule1 1
+
+Hier die bereinigte und lesbare Darstellung von Rule1 (wie sie aktuell auf deinem Gerät steht):
+
