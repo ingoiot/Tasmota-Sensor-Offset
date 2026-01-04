@@ -67,3 +67,4 @@ Sollte der Verbrauch während dieser 10 Sekunden wieder auf 10 Watt oder mehr st
 Bleibt der Verbrauch dauerhaft 10 Sekunden lang unter 8 Watt → Relay wird AUSgeschaltet (Power1 OFF).
 
 
+Backlog Rule1 0; Var1 0; Rule1 ON System#Boot DO Power1 ON ENDON ON Energy#Power<8 DO RuleTimer1 10 ENDON ON Energy#Power>=10 DO RuleTimer1 0 ENDON ON Clock#Timer=1 DO Add1 1 ENDON ON Rules#Timer=1 DO Power1 OFF ENDON; Rule1 1; Rule1 5; ClockTimer1 1; WebLog 4
